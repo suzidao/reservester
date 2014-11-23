@@ -26,5 +26,12 @@
   <strong>Phone:</strong>
   <%= @restaurant.phone %>
 </p>
+<p>
+  <strong>Map:</strong>
+  <img src="https://maps.googleapis.com/maps/api/staticmap?center=Boston,MA&zoom=13&size=600x300&key=AIzaSyDkOmMMgy6KC-e7I_WV70cGVmsOthrK9t4" />
+</p>
+
+<%= link_to "Edit", edit_restaurant_path(@restaurant) %>
+<%= link_to "Remove", restaurant_path(@restaurant), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <%= link_to 'Back', restaurants_path %>
