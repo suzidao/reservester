@@ -27,8 +27,11 @@
   <%= @restaurant.phone %>
 </p>
 <p>
+  <strong>Owner:</strong>
+  <%= @restaurant.owner.email %>
+<p>
   <strong>Map:</strong>
-  <img src="https://maps.googleapis.com/maps/api/staticmap?center=Boston,MA&zoom=13&size=600x300&key=AIzaSyDkOmMMgy6KC-e7I_WV70cGVmsOthrK9t4" />
+  <img src="https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&key=AIzaSyDkOmMMgy6KC-e7I_WV70cGVmsOthrK9t4&center=<%= @restaurant.address %><%= @restaurant.city %><%= @restaurant.state %><%= @restaurant.zipcode %>" />
 </p>
 
 <%= link_to "Edit", edit_restaurant_path(@restaurant) %>
